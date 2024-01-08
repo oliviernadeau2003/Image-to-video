@@ -35,12 +35,17 @@ def images_to_video(images_folder, output_video_path, image_prefix="frame", fps=
 
 if __name__ == "__main__":
     # Replace 'input_images' with the folder containing your images
-    input_images_folder = "./generated_images"
+    input_images_folder = (
+        input("Image To Video Folder (Default: ai_generated_images): ")
+        or "./ai_generated_images"
+    )
 
     # Replace 'output_video.mp4' with the desired output video file path
-    output_video_path = "output_video.mp4"
+    output_video_path = (
+        input("Video Output Name (Default: output_video.mp4): ") or "output_video.mp4"
+    )
 
     # Set the frames per second (fps) for the output video
-    output_fps = 15
+    output_fps = 10
 
     images_to_video(input_images_folder, output_video_path, fps=output_fps)
