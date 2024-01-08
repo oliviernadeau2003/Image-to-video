@@ -46,6 +46,6 @@ if __name__ == "__main__":
     )
 
     # Set the frames per second (fps) for the output video
-    output_fps = 10
+    output_fps = int(input("Video FPS (Default: 20):")) or 20
 
     images_to_video(input_images_folder, output_video_path, fps=output_fps)
